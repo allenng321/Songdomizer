@@ -30,15 +30,19 @@ if (process.platform === 'win32') {
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 768,
+  mainWindow =
+  new BrowserWindow({
+    width: 1392,
+    height: 835,
     show: false,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      autoHideMenuBar: true
     }
   })
+  mainWindow.setMenuBarVisibility(false)
+  mainWindow.setResizable(false)
 
   // and load the index.html of the app.
   let indexPath
@@ -62,17 +66,17 @@ function createWindow() {
 
   // Don't show until we are ready and loaded
   mainWindow.once('ready-to-show', () => {
-    mainWindow.show()
+    mainWindow.show()})
 
     // Open the DevTools automatically if developing
-    if (dev) {
-      const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer')
+  //   if (dev) {
+  //     const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer')
 
-      installExtension(REACT_DEVELOPER_TOOLS)
-        .catch(err => console.log('Error loading React DevTools: ', err))
-      mainWindow.webContents.openDevTools()
-    }
-  })
+  //     installExtension(REACT_DEVELOPER_TOOLS)
+  //       .catch(err => console.log('Error loading React DevTools: ', err))
+  //     mainWindow.webContents.openDevTools()
+  //   }
+  // })
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {

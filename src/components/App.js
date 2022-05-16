@@ -1,15 +1,14 @@
 import React from 'react'
 
 import '../assets/css/App.css'
+import video from '../assets/bg.mp4'
 
 function App() {
-  return (
-    <div>
-      <h1>Hello, Electron!</h1>
-
-      <p>I hope you enjoy using basic-electron-react-boilerplate to start your dev off right!</p>
-    </div>
-  )
+  return(
+    <video loop muted autoPlay id="backgroundVideo">
+        <source src={video} type="video/mp4"></source>
+    </video>
+  );
 }
 
 export default App
