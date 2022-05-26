@@ -6,6 +6,17 @@ html, body {
    width: 100%;
    height: 100%;
    margin: 0;
+   user-select: none;
+}
+
+@font-face {
+  font-family: averox;
+  src: url(../averox.otf);
+}
+
+@font-face {
+  font-family: cutewritten;
+  src: url(../Cutewritten-Regular.ttf);
 }
 
 #wrapper {
@@ -22,8 +33,21 @@ html, body {
 }
 
 #headline {
-  padding-top: 1.75rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   padding-left: 7rem;
+  font-size: 22px;
+  font-family: averox;
+}
+
+#artist-list {
+  padding-left: 3rem;
+  font-size: 22px;
+  font-family: cutewritten;
+}
+
+#artist-list h2{
+  padding-bottom: 2rem;
 }
 
 #background-video {
