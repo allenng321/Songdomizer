@@ -32,8 +32,15 @@ html, body {
   z-index: 100;
 }
 
+#right-section h2{
+  padding-top: 3rem;
+  color: white;
+  font-family: cutewritten;
+  font-size: 30px;
+}
+
 #headline {
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   padding-left: 7rem;
   font-size: 20px;

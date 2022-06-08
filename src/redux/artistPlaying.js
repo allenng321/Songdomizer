@@ -7,7 +7,7 @@ export const artistPlaying = createSlice({
   },
   reducers: {
     changeArtist: (state, action) => {
-      state.value = action.payload
+      state.value = "Current artist playing:   " + action.payload
     },
   },
 })

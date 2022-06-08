@@ -26,8 +26,8 @@ function App() {
               <Grid item xs={4}>
                   <LeftBar></LeftBar>
               </Grid>
-              <Grid item xs={8}>
-                  <h2 onClick={() =>  SetCurrentArtist()}> {currentArtist} </h2>
+              <Grid item xs={8} id="right-section">
+                  <h2> {currentArtist} </h2>
               </Grid>
           </Grid>
 
