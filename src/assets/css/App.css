@@ -36,7 +36,7 @@ html, body {
   padding-top: 2rem;
   padding-bottom: 3rem;
   padding-left: 7rem;
-  font-size: 22px;
+  font-size: 20px;
   font-family: averox;
 }
 
@@ -46,8 +46,13 @@ html, body {
   font-family: cutewritten;
 }
 
+#artist-list h2:hover {
+  font-size: 40px;
+}
+
 #artist-list h2{
-  padding-bottom: 2rem;
+  color: white;
+  display: inline-block;
 }
 
 #background-video {

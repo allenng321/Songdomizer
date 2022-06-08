@@ -3,22 +3,31 @@ import '../assets/css/App.css'
 import video from '../assets/bg.mp4'
 import Grid from '@mui/material/Grid';
 import LeftBar from '../components/LeftBar.js'
+import { useSelector, useDispatch } from 'react-redux'
+import { changeArtist } from '../redux/artistPlaying'
 
 
-function Test(name) {
-  console.log("You clicked " + name);
-}
 
 function App() {
+
+  const currentArtist = useSelector((state) => state.currentArtist.value)
+  const dispatch = useDispatch()
+
+  function SetCurrentArtist(artist) {
+    dispatch(changeArtist(artist))
+  }
+
+  App.SetCurrentArtist = SetCurrentArtist
+
   return(
     <div id="wrapper">
       <div id="main-content">
           <Grid container spacing={2}>
-              <Grid item xs={3}>
+              <Grid item xs={4}>
                   <LeftBar></LeftBar>
               </Grid>
-              <Grid item xs={9}>
-                  <h2>The Other Section</h2>
+              <Grid item xs={8}>
+                  <h2 onClick={() =>  SetCurrentArtist()}> {currentArtist} </h2>
               </Grid>
           </Grid>
 
@@ -35,4 +44,6 @@ function App() {
   );
 }
 
-export default App
+
+
+export {App}

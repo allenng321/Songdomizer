@@ -1,4 +1,8 @@
-export let data = [
+import {App} from "../components/App";
+import { useSelector, useDispatch } from 'react-redux'
+import { changeArtist } from '../redux/artistPlaying'
+
+let data = [
   { id: 1, name: "glaive"},
   { id: 2, name: "logic"},
   { id: 3, name: "ericdoa"},
@@ -8,3 +12,11 @@ export let data = [
   { id: 7, name: "juice wrld"},
   { id: 8, name: "rodick porter"}
 ]
+
+function OnClickBarItem(artist) {
+  // print("called")
+  App.SetCurrentArtist(artist);
+
+}
+
+export {data, OnClickBarItem}
