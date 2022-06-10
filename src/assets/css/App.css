@@ -32,6 +32,13 @@ html, body {
   z-index: 100;
 }
 
+#vertical-line {
+  left: unset;
+  width: unset;
+  top: 7%;
+  margin-top: 1.5rem;
+}
+
 #right-section h2{
   padding-top: 3rem;
   color: white;
