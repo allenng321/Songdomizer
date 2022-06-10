@@ -6,6 +6,8 @@ import LeftBar from '../components/LeftBar.js'
 import { useSelector, useDispatch } from 'react-redux'
 import { changeArtist } from '../redux/artistPlaying'
 import Divider from '@mui/material/Divider'
+import AudioPlayer from 'react-h5-audio-player';
+import '../assets/css/audioPlayer.css';
 
 
 
@@ -36,6 +38,7 @@ function App() {
               </Grid>
               <Grid item xs={8} id="right-section">
                   <h2> {currentArtist} </h2>
+                  <AudioPlayer/>
               </Grid>
           </Grid>
 
